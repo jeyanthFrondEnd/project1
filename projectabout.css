@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.all-posion header {
+    background-color: black;
+    background-attachment: fixed;
+    /* background-image: url(project-about.jpg); */
+    background-position: bottom;
+    /* width: 1600px; */
+    /* height: 200px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.all-posion header .container-fluid nav {
+    background-size: cover;
+    height: 80px;
+    border-bottom: 1px solid rgb(122, 122, 122);
+}
+
+.all-posion header nav .head-head {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+.all-posion header nav .head-head h3{
+    font-family: 'BioRhyme', serif;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    padding-left: 60px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    position: relative;
+    transition: color .5s ease;
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background: rgb(173, 4, 4);
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .8s ease;
+}
+
+header ul li a:hover {
+    color: rgb(173, 4, 4);
+}
+
+header ul li a:hover::before {
+    transform: scale(1);
+    transform-origin: left;
+
+}
+
+header .head-head {
+    position: relative;
+}
+
+header .head-head .head-icon #close,
+#open {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    font-size: 25px;
+    display: none;
+
+}
+
+header .head-head .head-icon i:hover {
+    color: rgb(173, 4, 4);
+}
+
+@media (max-width:800px) {
+    header {
+        position: relative;
+    }
+
+    header .container-fluid .head-head ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        animation-name: example;
+        animation-duration: 1s;  
+        transition: 1s;
+        transition: animation 1s ease-in-out;
+    }
+
+    @keyframes example {
+        from {transform: translateX(-100%);}
+        to {transform: translateX(0%);}
+      }
+
+    .head-head ul li {
+        background-color: #00000080;
+        background-size: 80vh;
+        width: 100vw;
+        text-align: center;
+        padding: 40px;
+    }
+
+    header .head-head .head-icon #open {
+        display: block;
+    }
+}
+
+
+/* Abouttttttt */
+
+
+ .section-zero h1{
+    color: #ffffff;
+    margin-top: 25px;
+    animation-name: h1;
+    position: relative;
+    display: inline-block;
+    animation-duration: 1.5s;  
+    animation-fill-mode: forwards;
+ }
+ .section-zero h1::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 3px;
+    background-color: rgb(173, 4, 4);
+    width: 20%;
+    height: 2px;
+    transform: scale(1);
+    animation-name: before;
+    animation-duration: 1.5s;  
+    animation-fill-mode: forwards;
+ }
+ .section-zero h1::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    right:3px;
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    height: 2px;
+    transform: scale(1);
+    animation-name: before;
+    animation-duration: 1.5s;  
+    animation-fill-mode: forwards;
+ }
+ @keyframes h1 {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0%);}
+  }
+  @keyframes before {
+    0% {opacity: 0;}
+    80%{
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    90% {opacity: 0.6;
+        transform: translateY(40%);}
+    95% {opacity: 0.8;
+        transform: translateY(60%);}
+    99% {opacity: 0.9;
+        transform: translateY(80%);}
+    100% {opacity: 1;
+        transform: translateY(100%);}
+  }
+  .section-zero .about{
+    margin-top: -20px;
+
+  }
+  .section-zero .button{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+.section-zero button{
+    background-color:rgb(173, 4, 4) ;
+    border:1px solid gray;
+    padding: 10px;
+    border-radius: 20px;
+    transition: .5s;
+    /* height: 50px; */
+}
+.section-zero button:hover{
+    box-shadow: 12px 12px 30px rgb(173, 4, 4);
+    border: none;
+}
+.section-zero .about_right .para{
+    text-align: justify;
+    line-height: 20px;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'BioRhyme', serif;
+}
+.section-zero .about_right .para h1{
+    font-family: 'BioRhyme', serif;
+}
+.section-zero .about_right .para p{
+    font-family: 'BioRhyme', serif;
+}
+@media (max-width:385px){
+    .section-zero .button{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+      }
+}
+
+/* clients */
+
+.client-section .clients .row .col-12{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    text-align: center;
+    background-image: url(people3.jpg);
+    gap: 50px;
+    /* width: 100%; */
+    border-bottom: 1px double black;
+    border-top: 1px double black;
+    padding: 10px 10px;
+    box-shadow: inset 1px 0 10px #000;
+
+}
+.client-section .clients .client-one h1{
+    color: rgb(173, 4, 4);
+    border-bottom: 3px solid black;
+    /* width: 80%; */
+    text-align: center;
+}
+.client-section .clients .client-one h4{
+    /* width: 80%; */
+    color: #ffffff;
+}
+.client-section .clients .client-two h1{
+    color: rgb(173, 4, 4);
+    border-bottom: 3px solid black;
+    /* width: 80%; */
+    text-align: center;
+}
+.client-section .clients .client-two h4{
+    /* width: 80%; */
+    color: #ffffff;
+}
+.client-section .clients .client-three h1{
+    color: rgb(173, 4, 4);
+    border-bottom: 3px solid black;
+    /* width: 80%; */
+    text-align: center;
+}
+.client-section .clients .client-three h4{
+    /* width: 80%; */
+    color: #ffffff;
+}
+@media (max-width:460px){
+    .client-section .clients .client-three h1{
+        font-size: 20px;
+    }
+    .client-section .clients .client-three h4{
+        font-size: 15px;
+    }
+    .client-section .clients .client-two h1{
+        font-size: 20px;
+    }
+    .client-section .clients .client-two h4{
+        font-size: 15px;
+    }
+    .client-section .clients .client-one h1{
+        font-size: 20px;
+    }
+    .client-section .clients .client-one h4{
+        font-size: 15px;
+    }
+}
+@media (max-width:320px){
+    .client-section .clients .client-three h1{
+        font-size: 15px;
+    }
+    .client-section .clients .client-three h4{
+        font-size: 10px;
+    }
+    .client-section .clients .client-two h1{
+        font-size: 15px;
+    }
+    .client-section .clients .client-two h4{
+        font-size: 10px;
+    }
+    .client-section .clients .client-one h1{
+        font-size: 15px;
+    }
+    .client-section .clients .client-one h4{
+        font-size: 10px;
+    }
+}
+
+
+/* featuress */
+
+
+.section .head {
+    /* margin-top: 370px; */
+    text-align: center;
+    font-weight: 550;
+    margin-bottom: 70px;
+}
+
+.section .features {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 50px;
+    text-align: center;
+}
+
+.section .features .feature-one:hover {
+    box-shadow: .1px .2px 15px #000;
+    transition: .5s ease-in-out;
+}
+
+@media (max-width:850px) {
+    .section .features {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width:630px) {
+    /* .section {
+        margin-top: 300px;
+        text-align: center;
+        font-weight: 550;
+        margin-bottom: 70px;
+    } */
+    .section .features {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .section .features .feature-one img {
+        height: 30px;
+    }
+}
+
+/* about */
+
+.section-three .about .about-top-right p{
+    font-weight: 550;
+    margin-top: 70px;
+    text-indent: 30px;
+    text-align: justify;
+} 
+
+@media (max-width:992px){
+    .section-three .about .about-top-right p{
+        font-weight: 550;
+        margin-top: 0;
+        text-indent: 30px;
+        text-align: justify;
+    } 
+}
+
+.about .about-bottom .about-bottom-right h4{
+    font-weight: 590;
+    font-style: italic;
+}
+/* footer */
+
+.footer h3{
+    font-family: 'BioRhyme', serif;
+}
+
+footer .footer-one .nav-item i{
+    background: rgb(151, 115, 115);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+footer .nav-item i:nth-child(1){
+    background-color: 	#1e4799;
+}
+footer .nav-item i:nth-child(2){
+    background:linear-gradient(to top,#feda75,#fa7e1e,#d62976 ,#962fbf, #4f5bd5);
+}
+footer .nav-item i:nth-child(3){
+    background:linear-gradient(160deg,#00acee,#20c0ff);
+    
+    /* color: blue; */
+}
+footer .footer-one .nav-item a{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

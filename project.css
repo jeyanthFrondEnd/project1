@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&family=Inclusive+Sans&family=Merriweather:ital,wght@1,300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.all-posion header{
+    background-image: url(people4.jpg);
+    background-attachment: fixed;
+    /* width: 1600px; */
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.all-posion header nav .head-head h3{
+    font-family: 'BioRhyme', serif;
+}
+.all-posion header .container-fluid{
+    background-color: #00000080;
+    background-size: cover;
+    height: 700px;
+}
+.all-posion header .container-fluid nav{
+    background-color: #00000080;
+    background-size: cover;
+    height: 80px;
+    border-bottom: 1px solid rgb(122, 122, 122);
+}
+.all-posion header nav .head-head{ 
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header ul li{
+    list-style: none;
+    padding-left:60px;
+}
+header ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    position: relative;
+    transition:color .5s ease;
+}
+header ul li a::before{
+    content: "";
+    position: absolute;
+    bottom:-3px ;
+    left: 0;
+    background: rgb(173, 4, 4);
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transform-origin: right;
+    transition:transform .8s ease;
+}
+header ul li a:hover{
+    color: rgb(173, 4, 4);
+}
+header ul li a:hover::before{
+    transform: scale(1);
+    transform-origin: left;
+
+}
+header .head-head{
+    position: relative;
+}
+header .head-head .head-icon #close,#open{
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    font-size: 25px;
+    display: none;
+    
+}
+header .head-head .head-icon i:hover{
+    color:rgb(173, 4, 4)
+}
+@media (max-width:800px){
+    header{
+        position: relative;
+    }
+    header .container-fluid .head-head ul{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        animation-name: example;
+        animation-duration: 1s;  
+        backdrop-filter: blur(100%);
+        transition: 1s;
+        transition: animation 1s ease-in-out;
+    }
+    @keyframes example {
+        from {transform: translateX(-100%);}
+        to {transform: translateX(0%);}
+      }
+    .head-head ul li {
+        background-color: #00000080;
+        background-size: 80vh;
+        width: 100vw;
+        text-align: center;
+        padding: 40px;
+    }
+    header .head-head .head-icon #open{
+        display: block;
+    }
+    /* header .head-head ul a{
+        position: absolute;
+    } */
+}
+
+
+                                                    /* Homeeeeeeeeee */
+
+.auto-home .head-home p:nth-child(1){
+   animation-name: p;
+   animation-duration: 2s;
+   animation-iteration-count: 1;
+}
+@keyframes p{
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0%);}
+}
+.auto-home .head-home .home-para{
+    animation-name: pp;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+ }
+ @keyframes pp{
+     from{transform: translateX(100%);}
+     to{transform: translateX(0%);}
+ }
+ .auto-home .head-home h1{
+    animation-name: head;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+ }
+ @keyframes head{
+    from{transform: translatey(-100%);}
+    to{transform: translatey(0%);}
+}
+header .head-home{
+    color: white;
+    padding-top: 100px;
+}
+header .head-home .home-web{
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+header .head-home .home-heading{
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+header .head-home .home-para{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+header .head-home button:active{
+    scale: .95;
+}
+
+                                /* featuress */
+
+
+.section .head{
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 550;
+    margin-bottom: 70px;
+}
+.section .features {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 50px;
+    text-align: center;
+}
+.section .features .feature-one:hover{
+    box-shadow: .1px .2px 10px #000;
+    transition: .5s ease-in-out;
+}
+@media (max-width:850px){
+    .section .features {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px;
+        text-align: center;
+    }
+}
+@media (max-width:630px){
+    .section .features {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+        text-align: center;
+    }
+    .section .features .feature-one img{
+        height: 30px;
+    }
+}
+
+                                /* topicssss */
+
+.section-one .topic-head h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.section-one .all-topics{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 50px 30px;
+
+}
+.section-one .all-topics .topic-one{
+        width: 200px;
+        
+}
+
+.section-one .all-topics .topic-one p{
+    font-size: 12px;
+    text-align: justify;
+}
+.section-one .all-topics p:nth-child(1){
+    color:rgb(173, 4, 4);
+}
+.section-one .all-topics .topic-one:hover p:nth-child(1){
+    color: rgb(39, 3, 136)
+
+}
+@media (max-width:1060px){
+    .section-one .all-topics{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 50px 10px;
+    
+    }
+    .section-one .all-topics .topic-one{
+        width: 160px;
+        
+}
+}
+@media (max-width:800px){
+    .section-one .all-topics{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px 10px;
+    
+    }
+
+}
+@media (max-width:500px){
+    .section-one .all-topics{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 50px 10px;
+    
+    }
+
+}
+
+@media (max-width:360px){
+    .section-one .all-topics{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px 10px;
+        
+    }
+
+}
+
+                                            /* emptyyyyyyyyy */
+
+
+.section-two{
+    margin-top: 70px;
+}
+.section-two .empty-left button{
+    margin-top: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.section-two .empty-right h3{
+line-height: 40px;
+}
+.section-two .empty-right .icon{
+    float: right;
+    /* text-align: center; */
+}
+.section-two .empty-right{
+    margin-bottom: 50px;
+}
+
+                                        /* About */
+
+
+.section-three .about .about-top-right p{
+    font-weight: 550;
+    margin-top: 70px;
+    text-indent: 30px;
+    text-align: justify;
+} 
+
+@media (max-width:992px){
+    .section-three .about .about-top-right p{
+        font-weight: 550;
+        margin-top: 0;
+        text-indent: 30px;
+        text-align: justify;
+    } 
+}
+
+.about .about-bottom .about-bottom-right h4{
+    font-weight: 590;
+    font-style: italic;
+}
+
+                                                        /* clients */
+
+.section-four{
+    font-family: 'BioRhyme', serif;
+font-family: 'Inclusive Sans', sans-serif;
+font-family: 'Merriweather', serif;
+}
+.section-four .clients .top-clients{
+    display: flex;
+}
+.section-four .clients .top-clients p{
+    text-align: justify;
+    padding-top: 10px;
+}
+@media (max-width:500px){
+    .section-four .clients .top-clients{
+        display: block;
+    }
+}
+
+/* footer */
+
+.footer h3{
+    font-family: 'BioRhyme', serif;
+}
+
+footer .footer-one .nav-item i{
+    background: rgb(151, 115, 115);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+footer .nav-item i:nth-child(1){
+    background-color: 	#1e4799;
+}
+footer .nav-item i:nth-child(2){
+    background:linear-gradient(to top,#feda75,#fa7e1e,#d62976 ,#962fbf, #4f5bd5);
+}
+footer .nav-item i:nth-child(3){
+    background:linear-gradient(160deg,#00acee,#20c0ff);
+    
+    /* color: blue; */
+}
+footer .footer-one .nav-item a{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
